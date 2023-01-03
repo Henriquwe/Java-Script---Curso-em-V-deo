@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ex-002</title>
+
+    <!- Style tag that informs that the HTML document's style codes will be inside the space, preferably this code should be done in a separate document and then linked to the document that makes reference. -!>
+    <style>
+        body {
+            background-color: rgb(65, 78, 74);
+            color: aliceblue;
+            font: optional 20px Arial;
+        }
+    </style>
+</head>
+
+<body>
+    <h1> HELLO, WORLD! </h1>
+    <p> Go away curse. </p>
+
+    <!- As the style tag, the script tag informs that the HTML document's scripts will be here, too preferably should be done in a separete document and then linked to the reference. -!>
+    <script>
+        // Using window. functions
+        window.alert('First this alert show up, them the page load the contents.')
+        window.confirm('JS is working fine?')
+
+        // Using concatenation
+        var firstNamePrompt = window.prompt('Enter your first name: ') // String
+        var secondNamePrompt = window.prompt('Enter your second name: ') // String
+        window.alert('Concatened: Pleasure to meet you ' + firstNamePrompt + ' ' + secondNamePrompt) // Concatened string
+
+        // Using template string instead of using concatenation
+        window.alert(`Template: Pleasure to meet you ${firstNamePrompt} ${secondNamePrompt}`)
+
+        // Another usefull functions
+        nameLength = Number.parseInt(firstNamePrompt.length) + Number.parseInt(secondNamePrompt.length)
+        window.alert(`Pleasure to meet you ${firstNamePrompt.toUpperCase()} ${secondNamePrompt.toLowerCase()}, name lenght: ${nameLength}`)
+
+        // Using Number.parse to convert a type to another type
+        var number1 = Number.parseInt(window.prompt('Enter a number: ')) // String to int using Number.parseInt
+        var number2 = Number.parseInt(window.prompt('Enter a second number: ')) // String to int using Number.parseInt
+        var sum = number1 + number2
+        window.alert('The sum result of the numbers is: ' + sum)
+
+        // Using document.write(), toFixed(n), replace(".", ".")
+        var floatNumber = 1500.1
+        floatNumber = floatNumber.toFixed(2)
+        floatNumber = floatNumber.replace(".", ",")
+
+        document.write(`Hello to our page: ${firstNamePrompt.toUpperCase()} ${secondNamePrompt.toUpperCase()} ID:${floatNumber}`)
+    </script>
+</body>
+
+</html>
