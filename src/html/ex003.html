@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>First steps with DOM</title>
+
+    <style>
+        body {
+            background-color: rgb(81, 119, 106);
+            color: whitesmoke;
+            font: 1em Arial, sans-serif;
+        }
+    </style>
+</head>
+
+<body>
+    <h1>H1 - Initializing studies with DOM</h1>
+    <p>P - Here will be put the result</p>
+    <p>P STRONG - Learning how to use <strong>STRONG DOM</strong> in Java Script</p>
+    <div id="idClickHere">DIV - CLICK HERE</div>
+
+    <script>
+        window.document.write('Hello World ' + window.document.URL)
+    </script>
+
+    <br>
+
+    <script>
+        var getElement = window.document.getElementsByTagName('p')[1]
+
+        window.document.write(`Conteúdo dentro de p[0]: ${getElement.innerHTML}`)
+        getElement.style.color = 'black'
+    </script>
+
+    <br>
+
+    <script>
+        var idClickHere = window.document.getElementById('idClickHere')
+        idClickHere.style.background = "green"
+        window.document.write(`Conteúdo dentro do ID "idClickHere": ${idClickHere.innerHTML}`)
+    </script>
+</body>
+</html>
